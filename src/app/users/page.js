@@ -11,9 +11,9 @@ export default async function Users(){
     let users = await getUsers();
     return(
         <div>
-            <h3>Users List</h3>
+            <Link href="./">Home</Link>
             <br/>
-            <Link href='./'>Got to home</Link>
+            <h3>Users List</h3>
             <br/>
             <h2>==========================================================</h2>
             {

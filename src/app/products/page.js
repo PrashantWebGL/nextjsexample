@@ -1,5 +1,5 @@
-import ProductTable from "./producttable";
-import ShowTable from "./showtable";
+import Link from "next/link";
+import ShowTable from "../components/showtable";
 
 async function prodcutList() {
     let data = await fetch("https://dummyjson.com/products");
@@ -10,9 +10,10 @@ async function prodcutList() {
 }
 export default async function Page() {
     let products = await prodcutList();
-    console.log(products);
+    
     return (
         <div>
+            <Link href="./">Home</Link>
             <h1> Product List </h1>
           
            <ShowTable itrProducts={products}></ShowTable>

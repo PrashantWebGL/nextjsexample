@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import './showtable.css'
+import './styles/showtable.css'
 
 export default function ShowTable({ itrProducts }) {
     return (
