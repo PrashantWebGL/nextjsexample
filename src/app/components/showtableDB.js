@@ -1,5 +1,8 @@
+"use client"
 import Image from 'next/image'
 import './styles/showtable.css'
+import Link from 'next/link'
+import DeleteProduct from './deleteProduct'
 
 export default function ShowTableDB({ itrProducts }) {
     return (
@@ -7,11 +10,13 @@ export default function ShowTableDB({ itrProducts }) {
             <table className="product-table">
                 <thead>
                     <tr>
-                        <th> Name </th>
-                        <th> Price </th>
-                        <th> Brand </th>
-                        <th> Color </th>
-                        <th> Category</th>
+                        <th> <h3> Name </h3>    </th>
+                        <th> <h3> Price </h3>   </th>
+                        <th> <h3> Brand </h3>   </th>
+                        <th> <h3> Color </h3>   </th>
+                        <th> <h3> Category </h3> </th>
+                        <th> <h3> Edit </h3> </th>
+                        <th> <h3> Delete </h3> </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,6 +28,8 @@ export default function ShowTableDB({ itrProducts }) {
                                 <th> {item.company} </th>
                                 <th> {item.color} </th>
                                 <th> {item.category} </th>
+                                <th> <Link href={"./showproducts/"+item._id}>Update</Link> </th>
+                                <th> <DeleteProduct params={item._id}></DeleteProduct> </th>
                             </tr>
                         ))
                     }

@@ -37,6 +37,8 @@ export default function Page(){
             
             <Link href="./">Home</Link>
             <br/>
+            <Link href="/showproducts">Show product</Link>
+            <br/>
             <h2>Add Product </h2>
             <input type="text" className="input" value={name}     onChange={(e)=>setName(e.target.value)}     placeholder="Enter product name"  ></input>
             <input type="text" className="input" value={price}    onChange={(e)=>setPrice(e.target.value)}    placeholder="Enter price"  ></input>

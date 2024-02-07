@@ -1,12 +1,11 @@
+"use client"
 import Link from "next/link";
 import ShowTableDB from "../components/showtableDB";
 
 
 async function prodcutList() {
-    let result = await fetch("http://localhost:3000/api/products",{ method:"GET" });
+    let result = await fetch("http://localhost:3000/api/products",{ method:"GET", cache: "no-store"  });
     result = await result.json();
-
-   //console.log(result.result);
 
     return result.result;
 
@@ -14,18 +13,15 @@ async function prodcutList() {
 export default async function Page() {
     let products = await prodcutList();
     
+    
     return (
         <div>
             <Link href="./">Home</Link>
+            <br/>
+            <Link href="/addproduct">Add product</Link>
             <h1> Product List </h1>
-            <ShowTableDB itrProducts={products}></ShowTableDB>
+            <ShowTableDB itrProducts={products}></ShowTableDB>  
             
-          
-            {/* <ShowTable itrProducts={products}></ShowTable>  */}
-            
-            
-            
-
         </div>
     )
 }
