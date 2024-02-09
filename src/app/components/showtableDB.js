@@ -3,6 +3,7 @@ import Image from 'next/image'
 import './styles/showtable.css'
 import Link from 'next/link'
 import DeleteProduct from './deleteProduct'
+import myImage from '/public/edit.svg';
 
 export default function ShowTableDB({ itrProducts }) {
     return (
@@ -28,7 +29,17 @@ export default function ShowTableDB({ itrProducts }) {
                                 <th> {item.company} </th>
                                 <th> {item.color} </th>
                                 <th> {item.category} </th>
-                                <th> <Link href={"./showproducts/"+item._id}>Update</Link> </th>
+                                <th>
+                                    <Link href={"./showproducts/" + item._id}>
+                                        <Image
+                                            src={myImage}
+                                            width={24}
+                                            height={24}
+                                            alt="Edit image"
+
+                                        />
+                                    </Link>
+                                </th>
                                 <th> <DeleteProduct params={item._id}></DeleteProduct> </th>
                             </tr>
                         ))
