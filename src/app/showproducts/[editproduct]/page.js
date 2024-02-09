@@ -36,6 +36,11 @@ export default function Page({ params }) {
     const router = useRouter();
 
     const updateProduct = async () => {
+        if(name,price,company,color,category == "")
+        {
+            alert("Add all product details");
+            return;
+        }
 
         let result = await fetch(baseURL + "/api/products/" + params.editproduct, {
             method: "PUT",
