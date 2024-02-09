@@ -1,10 +1,11 @@
 "use client"
 import Link from "next/link";
 import ShowTableDB from "../components/showtableDB";
+import { baseURL } from "@/lib/db";
 
 
 async function prodcutList() {
-    let result = await fetch("http://localhost:3000/api/products",{ method:"GET", cache: "no-store"  });
+    let result = await fetch(baseURL + "/api/products",{ method:"GET", cache: "no-store"  });
     result = await result.json();
 
     return result.result;

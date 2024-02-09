@@ -1,6 +1,7 @@
 "use client"
 
 import "@/app/components/styles/addproduct.css"
+import { baseURL } from "@/lib/db";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react"
@@ -20,7 +21,7 @@ export default function Page({ params }) {
     }, []);
 
     const getProductDetails = async () => {
-        let data = await fetch("http://localhost:3000/api/products/" + params.editproduct);
+        let data = await fetch(baseURL + "/api/products/" + params.editproduct);
         data = await data.json();
         if (data.sucess) {
             let result = data.result;
@@ -36,7 +37,7 @@ export default function Page({ params }) {
 
     const updateProduct = async () => {
 
-        let result = await fetch("http://localhost:3000/api/products/" + params.editproduct, {
+        let result = await fetch(baseURL + "/api/products/" + params.editproduct, {
             method: "PUT",
             body: JSON.stringify({ name, price, company, color, category })
         });

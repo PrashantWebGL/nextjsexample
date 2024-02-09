@@ -1,5 +1,6 @@
 "use client"
 import "@/app/components/styles/addproduct.css"
+import { baseURL } from "@/lib/db";
 import Link from "next/link";
 import { useState } from "react"
 
@@ -13,7 +14,7 @@ export default function Page(){
      
     const  addProduct = async ()=>{
         
-        let result = await fetch("http://localhost:3000/api/products",{
+        let result = await fetch(baseURL + "/api/products",{
             method:"POST",
             body:JSON.stringify({name,price,company,color,category})
         });
