@@ -30,6 +30,8 @@ export default function DeleteProduct(params) {
                 height={24}
                 alt="Delete Image"
                 onClick={deleteRecord}
+                style={{cursor: 'pointer'}}
+                title="Delete"
             />
 
         </div>

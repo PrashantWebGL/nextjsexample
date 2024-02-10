@@ -14,7 +14,6 @@ async function prodcutList() {
 export default async function Page() {
     let products = await prodcutList();
     
-    
     return (
         <div>    
             <br/>

@@ -8,10 +8,9 @@ import Image from "next/image";
 export default function Header() {
     return (
         <div className="HeaderStyle">
-
-            <Link href="/" ><Image src={homeimage}  className="styleNavimage1" width={24} height={24} alt="Edit image" title="Home Button"/></Link>
-            <Link href="/addproduct" ><Image src={addimage} className="styleNavimage2" width={24} height={24} alt="Edit image" title="Add Product"/></Link>
-            <Link href="/showproducts" ><Image src={tableimage} className="styleNavimage3" width={24} height={24} alt="Edit image" title="Show Procts"/></Link>
+            
+            <Link href="/addproduct" ><Image src={addimage} className="styleNavimage1" width={24} height={24} alt="Edit image" title="Add Product"/></Link>
+            <Link href="/showproducts" ><Image src={tableimage} className="styleNavimage2" width={24} height={24} alt="Edit image" title="Show Products"/></Link>
             <Link href="https://www.linkedin.com/in/prashantdh/" target="_blank" className="createdby"><h3>Created By</h3></Link>
 
         </div>

@@ -4,7 +4,7 @@ import { baseURL } from "@/lib/db";
 import Link from "next/link";
 import { useState } from "react"
 
-export default function Page(){
+export default function AddPage(){
     
     const [name,setName] = useState("");
     const [price,setPrice] = useState("");
@@ -40,7 +40,6 @@ export default function Page(){
     return(
        
         <div>
-            <br/>
             <br/>
             <h2>Add Product </h2>
             <input type="text" className="input" value={name}     onChange={(e)=>setName(e.target.value)}     placeholder="Enter product name"  ></input>

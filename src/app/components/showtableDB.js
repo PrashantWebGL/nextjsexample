@@ -36,6 +36,7 @@ export default function ShowTableDB({ itrProducts }) {
                                             width={24}
                                             height={24}
                                             alt="Edit image"
+                                            title='Edit'
 
                                         />
                                     </Link>
