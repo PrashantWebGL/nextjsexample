@@ -1,5 +1,21 @@
-
-
 :link{
   color: blue;
+}
+.titlebar{
+  width: 100%;
+  height: 5vh;
+  background-color: rgb(107, 149, 124);
+}
+.mainbody{
+  width: 100%;
+  height: 95vh;
+  
+  background-color: rgb(220, 245, 228);
+}
+.fullpage{
+  margin: 0;
+  padding: 0;
+}
+.childrenstyle{
+  margin-left: 1.5%;
 }

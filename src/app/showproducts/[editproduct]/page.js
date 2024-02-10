@@ -62,11 +62,7 @@ export default function Page({ params }) {
     }
 
     return (
-
-
         <div>
-
-            <Link href="/">Home</Link>
             <br />
             <h2>Update Product </h2>
             <input type="text" className="input" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter product name"  ></input>

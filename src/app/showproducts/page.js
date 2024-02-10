@@ -16,13 +16,10 @@ export default async function Page() {
     
     
     return (
-        <div>
-            <Link href="./">Home</Link>
+        <div>    
             <br/>
-            <Link href="/addproduct">Add product</Link>
             <h1> Product List </h1>
-            <ShowTableDB itrProducts={products}></ShowTableDB>  
-            
+            <ShowTableDB itrProducts={products}></ShowTableDB>     
         </div>
     )
 }

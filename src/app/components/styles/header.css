@@ -1,0 +1,32 @@
+.HeaderStyle{
+    vertical-align:middle;
+    height: 100%;
+    position: relative;
+}
+.styleNavimage1{
+    padding: 8px;
+    border: 1px solid  rgb(94, 119, 75) ;
+    margin-left: 8px;
+    position: absolute;
+    left: 10px;
+}
+.styleNavimage2{
+    padding: 8px;
+    border: 1px solid  rgb(94, 119, 75) ;
+    margin-left: 8px;
+    position: absolute;
+    left:62px;
+}
+.styleNavimage3{
+    padding: 8px;
+    border: 1px solid  rgb(94, 119, 75) ;
+    margin-left: 8px;
+    position: absolute;
+    left:116px;
+}
+.createdby{
+    position: absolute;
+    right: 10px;
+    margin: 0;
+    
+}
